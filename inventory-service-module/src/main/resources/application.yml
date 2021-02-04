@@ -1,0 +1,5 @@
+couchbase:
+  hostname: localhost
+  bucket-name: users
+  password: password
+  username: admin
