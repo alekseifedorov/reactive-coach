@@ -29,7 +29,7 @@
         <openApiVersion>1.5.3</openApiVersion>
         <maven.build.helper.version>3.2.0</maven.build.helper.version>
         <testcontainers.version>1.15.1</testcontainers.version>
-        <couchbase-client-1.x.version>1.4.13</couchbase-client-1.x.version>
+        <spring-cloud-contract.version>2.1.1.RELEASE</spring-cloud-contract.version>
     </properties>
 
     <dependencies>
