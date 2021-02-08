@@ -1,7 +1,7 @@
 package com.my.couchbase.example.service.inventory.mapping;
 
 import com.my.couchbase.example.service.inventory.configuration.MappingConfiguration;
-import com.my.couchbase.example.service.inventory.doc.ProductDoc;
+import com.my.couchbase.example.service.inventory.model.ProductDoc;
 import com.my.couchbase.example.service.inventory.dto.Product;
 import org.mapstruct.Mapper;
 

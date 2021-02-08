@@ -1,8 +1,8 @@
 package com.my.couchbase.example.service.inventory.service.impl;
 
-import com.my.couchbase.example.service.inventory.doc.ProductDoc;
-import com.my.couchbase.example.service.inventory.dto.Product;
 import com.my.couchbase.example.service.inventory.mapping.ProductMapper;
+import com.my.couchbase.example.service.inventory.model.ProductDoc;
+import com.my.couchbase.example.service.inventory.dto.Product;
 import com.my.couchbase.example.service.inventory.repository.ProductRepository;
 import com.my.couchbase.example.service.inventory.service.ProductService;
 import lombok.RequiredArgsConstructor;
@@ -16,7 +16,7 @@ public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
 
-  //  private final ProductMapper mapper;
+    private final ProductMapper mapper;
 
     @Override
     public Mono<ProductDoc> findById(String id) {
@@ -25,11 +25,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Mono<Product> create(Product product) {
-        return Mono.just(Product.builder().id("dfgsdfgdf").name("zxczxc").build());
-//        ProductDoc doc = mapper.fromDto(product);
-//        return productRepository.save(doc)
-//            .log()
-//            .map(mapper::toDto);
+        ProductDoc doc = mapper.fromDto(product);
+        return productRepository.save(doc)
+            .log()
+            .map(mapper::toDto);
     }
 
 }

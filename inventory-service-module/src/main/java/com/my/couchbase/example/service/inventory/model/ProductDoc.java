@@ -1,4 +1,4 @@
-package com.my.couchbase.example.service.inventory.doc;
+package com.my.couchbase.example.service.inventory.model;
 
 import java.io.Serializable;
 import javax.validation.constraints.NotNull;

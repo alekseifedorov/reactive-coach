@@ -1,6 +1,6 @@
 package com.my.couchbase.example.service.inventory.service;
 
-import com.my.couchbase.example.service.inventory.doc.ProductDoc;
+import com.my.couchbase.example.service.inventory.model.ProductDoc;
 import com.my.couchbase.example.service.inventory.dto.Product;
 import reactor.core.publisher.Mono;
 
