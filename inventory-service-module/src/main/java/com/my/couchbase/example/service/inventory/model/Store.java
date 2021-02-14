@@ -1,7 +1,5 @@
 package com.my.couchbase.example.service.inventory.model;
 
-import java.io.Serializable;
-import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,17 +15,14 @@ import org.springframework.data.couchbase.core.mapping.id.GenerationStrategy;
 @AllArgsConstructor
 @NoArgsConstructor
 @Document
-public class ProductDoc implements Serializable {
+public class Store {
 
   @Id
   @GeneratedValue(strategy = GenerationStrategy.UNIQUE)
   private String id;
 
   @Field
-  @NotNull
-  private String name;
-  @Field
-  private String description;
+  private String address;
   @Field
   private Integer quantity;
 }

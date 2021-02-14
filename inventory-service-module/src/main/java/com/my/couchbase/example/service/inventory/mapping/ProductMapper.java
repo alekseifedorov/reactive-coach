@@ -1,14 +1,14 @@
 package com.my.couchbase.example.service.inventory.mapping;
 
 import com.my.couchbase.example.service.inventory.configuration.MappingConfiguration;
-import com.my.couchbase.example.service.inventory.model.ProductDoc;
-import com.my.couchbase.example.service.inventory.dto.Product;
+import com.my.couchbase.example.service.inventory.dto.ProductDto;
+import com.my.couchbase.example.service.inventory.model.Product;
 import org.mapstruct.Mapper;
 
 @Mapper(config = MappingConfiguration.class)
 public interface ProductMapper {
 
-    ProductDoc fromDto(Product dto);
+    Product fromDto(ProductDto dto);
 
-    Product toDto(ProductDoc doc);
+    ProductDto toDto(Product doc);
 }
